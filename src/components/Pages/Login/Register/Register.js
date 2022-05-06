@@ -13,9 +13,11 @@ const Register = () => {
 
     const [
         createUserWithEmailAndPassword,
-
+        user,
+        loading,
+        error,
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
-    const [updateProfile] = useUpdateProfile(auth);
+    const [updateProfile, updating, updateError] = useUpdateProfile(auth);
     const handleNameBlur = (e) => {
         setDisplayName(e.target.value);
     }
