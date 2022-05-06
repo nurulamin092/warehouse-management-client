@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
 import SocialLogin from '../SocialLogin/SocialLogin';
@@ -25,17 +26,27 @@ const Login = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
     const handleSubmit = (e) => {
         e.preventDefault()
     }
     if (user) {
         navigate(from, { replace: true });
     }
-    if (loading) {
+    if (loading || sending) {
         <Loading></Loading>
     }
     if (error) {
         errorElement = <p className='text-danger'>Error: {error?.message}</p>
+    }
+    const resetPassword = async () => {
+        if (email) {
+            await sendPasswordResetEmail(email);
+            toast('send email')
+        }
+        else {
+            toast('please enter your email address');
+        }
     }
     const navigateRegister = (e) => {
         navigate('/home');
@@ -58,8 +69,9 @@ const Login = () => {
                 </Form>
                 {errorElement}
                 <p className='d-flex'><span className='mx-2'>Don’t have an account?</span> <Link to='/register' className='text-danger pe-auto text-decoration-none' onClick={navigateRegister}>Please Register</Link></p>
-                <p>Forget Password? <button className='btn btn-link text-primary pe-auto text-decoration-none'>Reset Password</button> </p>
+                <p>Forget Password? <button className='btn btn-link text-primary pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</button> </p>
                 <SocialLogin></SocialLogin>
+                <ToastContainer></ToastContainer>
             </div>
         </div>
     );
