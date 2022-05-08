@@ -7,6 +7,7 @@ import Login from '../src/components/Pages/Login/Login/Login';
 import Register from '../src/components/Pages/Login/Register/Register';
 import RequireAuth from '../src/components/Pages/Login/RequireAuth/RequireAuth';
 import NotFound from '../src/components/Pages/Shared/NotFound/NotFound';
+import AddItems from './components/Pages/AddItems/AddItems';
 function App() {
   return (
     <div>
@@ -15,6 +16,7 @@ function App() {
         <Route path='/' element={<Home></Home>} />
         <Route path='/home' element={<Home></Home>} />
         <Route path='/about' element={<RequireAuth><About></About></RequireAuth>} />
+        <Route path='/add-items' element={<RequireAuth><AddItems></AddItems></RequireAuth>} />
         <Route path='/login' element={<Login></Login>} />
         <Route path='/register' element={<Register></Register>} />
         <Route path='*' element={<NotFound></NotFound>} />
