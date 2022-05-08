@@ -10,7 +10,7 @@ const Header = () => {
         signOut(auth);
     }
     return (
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar sticky='top' collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container>
                 <Navbar.Brand as={Link} to="/">Laptop Warehouse</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
