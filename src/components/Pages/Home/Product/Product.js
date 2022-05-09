@@ -1,13 +1,15 @@
 import React from 'react';
-
+import './Product.css'
 const Product = ({ product }) => {
-    const { _id, name, price, img, description, suppiler, quantity } = product;
+    const { _id, name, price, photoUrl, description, supplierName, quantity } = product;
     return (
-        <div>
-            <img height={300} src={img} alt="" />
+        <div className='product-container'>
+            <img height={300} src={photoUrl} alt="" />
             <h1>{name}</h1>
-            <h2>$<span>{price}</span></h2>
-            <p>{description}</p>
+            <h2>Price $<span>{price}</span></h2>
+            <p>Description {description}</p>
+            <p>Supplier Name: {supplierName}</p>
+            <p>Quantity {quantity}</p>
             <button className='btn btn-primary'>Stock Update</button>
         </div>
     );

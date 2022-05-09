@@ -5,3 +5,9 @@
     text-align: center;
     margin: 10px;
 }
+
+.product-container p:hover {
+    color: orange;
+    font-size: large;
+    font-weight: 400;
+}

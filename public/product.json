@@ -4,41 +4,53 @@
         "name": "Zenbook Duo 14 (UX482)",
         "price": "1300",
         "description": "ZenBook Duo 14 lets you get things done in style: calmly, efficiently, and with zero fuss. It’s your powerful and elegant next-level companion for on-the-go productivity and creativity, featuring the ScreenPad™ Plus secondary display with a brand-new tilting design that offers effortless ergonomics and seamless workflows. Powered by the latest 11th Gen Intel® Core™ processors, ZenBook Duo 14 brings you all the benefits of tomorrow’s technology, today.",
-        "img": "https://i.ibb.co/p28Gc8m/Background-1.png"
+        "photoUrl": "https://i.ibb.co/p28Gc8m/Background-1.png",
+        "supplierName": "Global Brand",
+        "quantity": "10"
     },
     {
         "id": 2,
         "name": "Surface 8 Pro Lead",
         "price": "1100",
         "description": "In anticipation of the upcoming Windows 11 launch, Microsoft is introducing an almost complete top to bottom refresh of their Surface device lineup. Some devices are getting some minor tweaks, while other devices are completely new. As tends to be the case, all of them feature quirks which are distinctively Surface.",
-        "img": "https://i.ibb.co/S6qC3Jv/Background-2.png"
+        "photoUrl": "https://i.ibb.co/S6qC3Jv/Background-2.png",
+        "supplierName": "Micro Soft",
+        "quantity": "10"
     },
     {
         "id": 3,
         "name": "ThinkPad T14s (AMD)",
         "price": "850",
         "description": "Lightweight in chassis only  With lightweight portability and heavyweight performance, the ThinkPad T14s laptop raises the bar for the corporate gold standard. It packs in powerful AMD processing and graphics, long battery life, tons of storage, and smarter security. Plus, time-saving features like call-control keys, Modern Standby, and Wake on Voice offer convenience and improve productivity",
-        "img": "https://i.ibb.co/Y2Lwk4K/Background-3.png"
+        "photoUrl": "https://i.ibb.co/Y2Lwk4K/Background-3.png",
+        "supplierName": "Global Brand",
+        "quantity": "10"
     },
     {
         "id": 4,
         "name": "Lenovo ThinkPad X1 Carbon 7th Generation Ultrabook",
         "price": "1180",
         "description": "Intel Core i7-8565U Processor 1. 8GHz, Up to 4. 6GHz Turbo, Quad Core  14 Anti-glare LED Backlit IPS FHD (1920 x 1080) Display16GB LPDDR3 2133MHz RAM, 512GB Solid State Drive Backlit Keyboard, Fingerprint Reader, Windows 10 Intel Integrated 620 Graphics, HDMI, 802. 11 Wireless-AC.",
-        "img": "https://i.ibb.co/mvTSfcC/Background-4.png"
+        "photoUrl": "https://i.ibb.co/mvTSfcC/Background-4.png",
+        "supplierName": "Global Brand",
+        "quantity": "10"
     },
     {
         "id": 5,
         "name": "Apple M1 Chip with 8-Core CPU and 7-Core GPU 256GB Storage",
         "price": "999",
         "description": "Apple M1 chip with 8‑core CPU, 7‑core GPU, and 16‑core Neural Engine 8GB unified memory 256GB SSD storage¹ Retina display with True Tone Magic Keyboard Touch ID Force Touch trackpad Two Thunderbolt / USB 4 ports",
-        "img": "https://i.ibb.co/Jd0tXbW/Background-5.png"
+        "photoUrl": "https://i.ibb.co/Jd0tXbW/Background-5.png",
+        "supplierName": "Global Brand",
+        "quantity": "10"
     },
     {
         "id": 6,
         "name": " Apple M1 Chip with 8-Core CPU and 8-Core GPU 512GB Storage",
         "price": "1300",
         "description": "Apple M1 chip with 8‑core CPU, 7‑core GPU, and 16‑core Neural Engine 8GB unified memory 256GB SSD storage¹ Retina display with True Tone Magic Keyboard Touch ID Force Touch trackpad Two Thunderbolt / USB 4 ports",
-        "img": "https://i.ibb.co/xXHMfqj/Background.png"
+        "photoUrl": "https://i.ibb.co/xXHMfqj/Background.png",
+        "supplierName": "Global Brand",
+        "quantity": "10"
     }
 ]
