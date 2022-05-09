@@ -11,7 +11,7 @@ const ProductDetail = () => {
         fetch(localhostUrl)
             .then(res => res.json())
             .then(data => setProduct(data))
-    }, []);
+    }, [product]);
 
     const handleUpdateQuantity = (e) => {
         e.preventDefault();
