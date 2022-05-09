@@ -7,9 +7,9 @@ const ManageProducts = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm('Are you sure delete this product?');
         if (proceed) {
-            const localhostUrl = `http://localhost:5000/products/${id}`;
-            //const serverUrl = `https://serene-brook-28678.herokuapp.com/products/${id}`;
-            fetch(localhostUrl, {
+            //const localhostUrl = `http://localhost:5000/products/${id}`;
+            const serverUrl = `https://serene-brook-28678.herokuapp.com/products/${id}`;
+            fetch(serverUrl, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
