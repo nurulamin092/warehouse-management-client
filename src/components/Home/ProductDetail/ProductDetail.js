@@ -6,9 +6,9 @@ const ProductDetail = () => {
     const { productId } = useParams();
     const [product, setProduct] = useState({});
     useEffect(() => {
-        const localhostUrl = `http://localhost:5000/products/${productId}`;
-        // const url = `https://serene-brook-28678.herokuapp.com/products/${productId}`;
-        fetch(localhostUrl)
+        // const localhostUrl = `http://localhost:5000/products/${productId}`;
+        const url = `https://serene-brook-28678.herokuapp.com/products/${productId}`;
+        fetch(url)
             .then(res => res.json())
             .then(data => setProduct(data))
     }, [product]);
@@ -19,7 +19,7 @@ const ProductDetail = () => {
         const newQuantity = parseInt(e.target.quantity.value);
         const quantity = (previousQuantity + newQuantity);
         const updateQuantity = { quantity }
-        const url = `http://localhost:5000/products/${productId}`;
+        const url = `https://serene-brook-28678.herokuapp.com/products/${productId}`;
         fetch(url, {
             method: 'PUT',
             headers: {
