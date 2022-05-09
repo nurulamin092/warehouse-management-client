@@ -3,7 +3,6 @@ import useProducts from '../../hooks/useProducts';
 
 const ManageProduct = () => {
     const [products] = useProducts();
-
     return (
         <div className='w-50 mx-auto'>
             <h1>This is mange product</h1>
