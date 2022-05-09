@@ -34,26 +34,26 @@ const ProductDetail = () => {
                 e.target.reset();
             })
     }
-    const handleDeliveredQuantity = (e) => {
-        e.preventDefault();
-        const quantity = parseInt(product.quantity);
-        const quantityDelivered = (quantity - 1);
-        const delivered = { quantityDelivered }
-        const url = `http://localhost:5000/products/${productId}`;
-        fetch(url, {
-            method: 'PUT',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(delivered)
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log('success', data);
-                toast('quantity added successfully!!!');
-
-            })
-    }
+    /*  const handleDeliveredQuantity = (e) => {
+         e.preventDefault();
+         const quantity = parseInt(product.quantity);
+         const quantityDelivered = (quantity - 1);
+         const delivered = { quantityDelivered }
+         const url = `http://localhost:5000/products/${productId}`;
+         fetch(url, {
+             method: 'PUT',
+             headers: {
+                 'content-type': 'application/json'
+             },
+             body: JSON.stringify(delivered)
+         })
+             .then(res => res.json())
+             .then(data => {
+                 console.log('success', data);
+                 toast('quantity added successfully!!!');
+ 
+             })
+     } */
     return (
         <div>
             <div className='w-50 mx-auto mt-4'>
