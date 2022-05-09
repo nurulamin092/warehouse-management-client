@@ -1,8 +1,8 @@
 import React from 'react';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
-import auth from '../../../../firebase.init';
-import google from '../../../../images/social/google.png';
+import auth from '../../../firebase.init'
+import google from '../../../images/social/google.png';
 import Loading from '../../Shared/Loading/Loading';
 const SocialLogin = () => {
     const navigate = useNavigate();

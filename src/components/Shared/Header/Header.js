@@ -3,7 +3,7 @@ import React from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
-import auth from '../../../../firebase.init';
+import auth from '../../../firebase.init';
 const Header = () => {
     const [user] = useAuthState(auth);
     const handleSignOut = () => {
@@ -20,13 +20,14 @@ const Header = () => {
 
                     </Nav>
                     <Nav>
-                        <Nav.Link as={Link} to="about">About</Nav.Link>
                         {
                             user && <>
-                                <Nav.Link as={Link} to="add-items">Add Items</Nav.Link>
+                                <Nav.Link as={Link} to="add-items">Add Product</Nav.Link>
+                                <Nav.Link as={Link} to="manage-product">Manage Product</Nav.Link>
 
                             </>
                         }
+                        <Nav.Link as={Link} to="about">About</Nav.Link>
                         {
                             user ?
                                 <Button onClick={handleSignOut}> {user.displayName} SignOut</Button> :
