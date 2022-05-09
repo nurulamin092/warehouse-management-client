@@ -1,0 +1,42 @@
+.manage-product {
+    border: 1px solid #95A0A7;
+    border-radius: 8px;
+    padding: 8px;
+    margin-top: 21px;
+    width: 571px;
+    display: flex;
+}
+
+.manage-product img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.manage-product-details p {
+    margin: 0;
+}
+
+.manage-product-details-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.manage-product .delete-container {
+    display: flex;
+    align-items: center;
+}
+
+.manage-product .delete-button {
+    background: rgba(235, 87, 87, 0.3);
+    border: 0;
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.delete-icon {
+    color: rgba(235, 87, 87, 1);
+    font-size: 27px;
+}

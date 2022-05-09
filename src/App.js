@@ -10,7 +10,7 @@ import NotFound from '../src/components/Shared/NotFound/NotFound';
 import AddItems from './components/AddItems/AddItems';
 import ProductDetail from './components/Home/ProductDetail/ProductDetail';
 import Footer from './components/Shared/Footer/Footer';
-import ManageProduct from './components/ManageProduct/ManageProduct';
+import ManageProducts from './components/ManageProducts/ManageProducts';
 function App() {
   return (
     <div>
@@ -20,7 +20,7 @@ function App() {
         <Route path='/home' element={<Home></Home>} />
         <Route path='/about' element={<RequireAuth><About></About></RequireAuth>} />
         <Route path='/add-items' element={<RequireAuth><AddItems></AddItems></RequireAuth>} />
-        <Route path='/manage-product' element={<RequireAuth><ManageProduct></ManageProduct></RequireAuth>} />
+        <Route path='/manage-product' element={<RequireAuth><ManageProducts></ManageProducts></RequireAuth>} />
         <Route path='/product/:productId' element={<RequireAuth><ProductDetail></ProductDetail></RequireAuth>} />
         <Route path='/login' element={<Login></Login>} />
         <Route path='/register' element={<Register></Register>} />
