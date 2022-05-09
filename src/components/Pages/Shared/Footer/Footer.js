@@ -4,8 +4,8 @@ const Footer = () => {
     const today = new Date();
     const year = today.getFullYear();
     return (
-        <footer className='main-footer mt-3 bg-dark text-white container'>
-            <div >
+        <footer className='main-footer mt-3 bg-dark text-white'>
+            <div className='footer'>
                 <div className='row'>
                     <div className='col-md-3 col-sm-6'>
                         <h4>Laptop Hut.</h4>

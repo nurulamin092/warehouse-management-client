@@ -1,41 +1,36 @@
 import React from 'react';
-import { useAuthState } from 'react-firebase-hooks/auth';
-import auth from '../../../firebase.init';
-
+import { useForm } from "react-hook-form";
 const AddItems = () => {
-    const [user] = useAuthState(auth);
-    const handleAddItems = (e) => {
-        e.preventDefault();
-        const name = e.target.name.value;
-        const description = e.target.description.value;
-        const price = e.target.price.value;
-        const quantity = e.target.quantity.value;
-        const supplier = e.target.supplier.value;
-        const photo = e.target.photo.value;
 
-        console.log(name, description, price, quantity, supplier, photo);
-
-        const url = `http://localhost:5000/products`;
-        const requestOptions = {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ title: 'React POST Request Example' })
-        };
-        fetch(url, requestOptions)
+    const { register, handleSubmit } = useForm();
+    const onSubmit = data => {
+        console.log(data)
+        const localhostUrl = `http://localhost:5000/products`;
+        // const serverUrl = `https://serene-brook-28678.herokuapp.com/products`;
+        fetch(localhostUrl, {
+            method: "POST",
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
             .then(res => res.json())
-            .then()
-    }
+            .then(result => {
+                console.log(result)
+            })
+
+    };
     return (
         <div className='w-50 mx-auto'>
             <h2>Please add a service</h2>
-            <form className='d-flex flex-column' onSubmit={handleAddItems}>
-                <input className='mb-2' name="name" placeholder='Name' />
-                <textarea className='mb-2' name='description' placeholder='Description' />
-                <input className='mb-2' name='price' placeholder='Price' type="number" />
-                <input className='mb-2' name='quantity' placeholder='Quantity' type="number" />
-                <input className='mb-2' name='supplier' placeholder='Supplier Name' type="text" />
-                <input className='mb-2' name='photo' placeholder='Photo URL' type="text" />
-                <input className='btn btn-primary' type="submit" value="Add Items" />
+            <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
+                <input className='mb-2' placeholder='Name' {...register("name", { required: true, maxLength: 50 })} />
+                <input className='mb-2' placeholder='Supplier Name' {...register("supplierName", { required: true, maxLength: 50 })} />
+                <input className='mb-2' placeholder='Price' type="number" {...register("price")} />
+                <input className='mb-2' placeholder='Quantity' type="number" {...register("quantity")} />
+                <input className='mb-2' placeholder='Photo URL' type="text" {...register("photoUrl")} />
+                <textarea className='mb-2' placeholder='Description' {...register("description")} />
+                <input type="submit" value="Add Items" />
             </form>
         </div>
     );

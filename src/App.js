@@ -9,6 +9,7 @@ import RequireAuth from '../src/components/Pages/Login/RequireAuth/RequireAuth';
 import NotFound from '../src/components/Pages/Shared/NotFound/NotFound';
 import AddItems from './components/Pages/AddItems/AddItems';
 import ProductDetail from './components/Pages/Home/ProductDetail/ProductDetail';
+import Footer from './components/Pages/Shared/Footer/Footer';
 function App() {
   return (
     <div>
@@ -23,6 +24,7 @@ function App() {
         <Route path='/register' element={<Register></Register>} />
         <Route path='*' element={<NotFound></NotFound>} />
       </Routes>
+      <Footer></Footer>
     </div>
   );
 }
