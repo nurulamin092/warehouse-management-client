@@ -65,7 +65,7 @@ const ProductDetail = () => {
                     <p>Supplier Name: {product.supplierName}</p>
                     <p>Quantity {product.quantity}</p>
                 </div>
-                <input className='my-3' onClick={handleDeliveredQuantity} type="submit" value="Delivered" />
+                {/*   <input className='my-3' onClick={handleDeliveredQuantity} type="submit" value="Delivered" /> */}
             </div>
             <div className='d-flex'>
                 <form className='w-50 mx-auto' onSubmit={handleUpdateQuantity}>
