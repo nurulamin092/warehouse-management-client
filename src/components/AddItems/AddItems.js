@@ -6,9 +6,9 @@ const AddItems = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
         console.log(data)
-        const localhostUrl = `http://localhost:5000/products`;
-        // const serverUrl = `https://serene-brook-28678.herokuapp.com/products`;
-        fetch(localhostUrl, {
+        //const localhostUrl = `http://localhost:5000/products`;
+        const serverUrl = `https://serene-brook-28678.herokuapp.com/products`;
+        fetch(serverUrl, {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
