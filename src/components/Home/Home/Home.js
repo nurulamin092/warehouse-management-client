@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import Footer from '../../Shared/Footer/Footer';
 import Banner from '../Banner/Banner';
 import Products from '../Products/Products';
 
@@ -22,8 +21,6 @@ const Home = () => {
                 <h2 className='text-center'>LIVE CHAT & HOTLINE SUPPORT</h2>
                 <p>
                     For any kind of ICT help whatever it is purchase, information about any product, service, enterprise solutions or online shop related issues, Laptop Stock BD welcomes you all.
-
-
                 </p>
             </section>
 
